@@ -7,6 +7,7 @@ import {Card,Navbar,Carousel,Button,NavDropdown,Nav,Container, Row,Col} from 're
 function App() {
   return (
     <div className="App">
+    // Simple navbar imported from react bootstrap
         <Navbar expand="lg" className="black-body-tertiary">
       <Container>
         <Navbar.Brand href="#home">Mousalsel</Navbar.Brand>
@@ -31,7 +32,7 @@ function App() {
     </Navbar>
 
     <br></br><br></br><br></br><br></br>
-      {/* Slides Showing upcoming movies  */}
+      {/* 3 Slides Showing upcoming movies  */}
     
  <Carousel data-bs-theme="dark">
       <Carousel.Item className='carousel'>
@@ -72,7 +73,8 @@ function App() {
     </Carousel>
     
     <br></br><br></br><br></br><br></br>
-{/* Cards for movies to watch */}
+            
+{/* React-bootstrap Cards with movies pics/descriptions and a play button */}
 
 <Container style={{marginRight:'10px'}}>
   <Row>

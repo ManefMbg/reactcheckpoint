@@ -1,13 +1,12 @@
 import './App.css';
 import React from 'react';
 // Importing react components from react bootstrap
-import {Card,Navbar,Carousel,Button,NavDropdown,Nav,Container, Row,Col} from 'react-bootstrap'
+import {Card,Navbar,Carousel,Button,NavDropdown,Nav,Container, Row,Col,Form} from 'react-bootstrap'
 
 
 function App() {
   return (
     <div className="App">
-    // Simple navbar imported from react bootstrap
         <Navbar expand="lg" className="black-body-tertiary">
       <Container>
         <Navbar.Brand href="#home">Mousalsel</Navbar.Brand>
@@ -32,7 +31,7 @@ function App() {
     </Navbar>
 
     <br></br><br></br><br></br><br></br>
-      {/* 3 Slides Showing upcoming movies  */}
+      {/* Slides Showing upcoming movies  */}
     
  <Carousel data-bs-theme="dark">
       <Carousel.Item className='carousel'>
@@ -73,8 +72,7 @@ function App() {
     </Carousel>
     
     <br></br><br></br><br></br><br></br>
-            
-{/* React-bootstrap Cards with movies pics/descriptions and a play button */}
+{/* Cards for movies to watch */}
 
 <Container style={{marginRight:'10px'}}>
   <Row>
@@ -84,8 +82,8 @@ function App() {
       <Card.Body>
         <Card.Title>Avatar</Card.Title>
         <Card.Text>
-        Avatar is a 2009 epic science fiction film directed, 
-        written, co-produced, and co-edited by James Cameron 
+        Avatar is an American media franchise created by James Cameron, 
+        which consists of a planned series of epic science fiction films 
         </Card.Text>
         <Button variant="primary">Watch</Button>
       </Card.Body>
@@ -122,8 +120,33 @@ function App() {
   </Row>
 </Container>
 
+
+<Form style={{width: '20em', marginLeft: '33em', marginTop: '5em', marginBottom: '5em'}}>
+  <h3>Contact us</h3>
+  <br></br>
+
+  {/* Bootstrap Contact us form  */}
+      <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Label>Email address</Form.Label>
+        <Form.Control type="email" placeholder="Enter email" />
+        <Form.Text className="text-muted">
+          We'll never share your email with anyone else.
+        </Form.Text>
+      </Form.Group>
+
+      <Form.Group className="mb-3" controlId="formBasicPassword">
+        <Form.Label>Write us</Form.Label>
+        <Form.Control type="text"  style={{width:'20em', height:'10em'}} />
+      </Form.Group>
+      <Button variant="primary" type="submit">
+        Submit
+      </Button>
+    </Form>
+
+
     </div>
   );
 }
 
 export default App;
+
